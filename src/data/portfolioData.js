@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Shiv Kumar Tripathi",
-  shortName: "Shiv",
+  shortName: "Shiv Kumar",
   role: "Full Stack & Mobile Application Developer",
   location: "Pune, India",
   phone: "+91 8299535242",
