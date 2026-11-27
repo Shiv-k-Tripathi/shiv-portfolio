@@ -7,9 +7,9 @@ export const profileData = {
   email: "shivkumartripathi36@gmail.com",
   availability: "Available for Software Engineering & Consulting Roles",
   summary:
-    "Results-driven Full Stack Developer with 4+ years of experience architecting scalable, high-performance web and mobile applications. Specialized in React, React Native, Android/iOS development, Node.js, and MongoDB, with deep expertise in API design, real-time systems, and POS hardware integrations.",
+    "Results-driven Full Stack Developer with 5+ years of experience architecting scalable, high-performance web and mobile applications. Specialized in React, React Native, Android/iOS development, Node.js, and MongoDB, with deep expertise in API design, real-time systems, and POS hardware integrations.",
   highlights: [
-    { label: "Experience", value: "4+ Years" },
+    { label: "Experience", value: "5+ Years" },
     { label: "Core Focus", value: "Web, Mobile & POS" },
     { label: "Location", value: "Pune, India" },
   ],

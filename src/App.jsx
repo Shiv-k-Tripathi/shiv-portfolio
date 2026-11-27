@@ -443,7 +443,7 @@ export default function App() {
               >
                 <code>{`const shiv = {
   role: "Full Stack & Mobile Dev",
-  experience: "4+ Years",
+  experience: "5+ Years",
   company: "Amonex Technology",
   coreStack: [
     "React.js", "React Native",
