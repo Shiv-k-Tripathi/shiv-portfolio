@@ -128,6 +128,29 @@ export default function App() {
   });
 
   useEffect(() => {
+    document.title = `${profileData.name} | ${profileData.role}`;
+
+    const setMetaTag = (name, content) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    setMetaTag(
+      "description",
+      `${profileData.name} — ${profileData.role} based in ${profileData.location}. ${profileData.summary}`
+    );
+    setMetaTag(
+      "keywords",
+      "Shiv Kumar Tripathi, Full Stack Developer, React.js, React Native, Node.js, MongoDB, POS Integration, Android SDK, Bluetooth Printing, Pune Developer"
+    );
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem(
       "shiv_portfolio_testimonials",
       JSON.stringify(testimonials)
@@ -668,11 +691,10 @@ export default function App() {
             <button
               key={cat}
               onClick={() => setSelectedTestimonialCat(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer border ${
-                selectedTestimonialCat === cat
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer border ${selectedTestimonialCat === cat
                   ? `${t.accentBg} ${t.accentBtnText} border-transparent`
                   : `${t.surface} ${t.textMuted} ${t.border}`
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -692,11 +714,10 @@ export default function App() {
                     {Array.from({ length: 5 }).map((_, idx) => (
                       <Star
                         key={idx}
-                        className={`w-4 h-4 ${
-                          idx < item.rating
+                        className={`w-4 h-4 ${idx < item.rating
                             ? "fill-amber-400 text-amber-400"
                             : "text-slate-600"
-                        }`}
+                          }`}
                       />
                     ))}
                   </div>
